@@ -72,30 +72,17 @@ const Login = () => {
         <>
             <Header />
             <div className='absolute'>
-                <img src={ BACKGROUND_IMG } alt="" />
+                <img className='min-h-screen object-cover' src={ BACKGROUND_IMG } alt="" />
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className='absolute bg-black w-3/12 my-36 mx-auto left-0 right-0 text-center text-white p-8 bg-opacity-80'>
+            <form onSubmit={(e) => e.preventDefault()} className='absolute bg-black w-[85%] md:w-3/12 my-36 mx-auto left-0 right-0 text-center text-white p-8 bg-opacity-80'>
                 <h1 className='font-bold text-3xl p-5 text-center cursor-default'>{signInForm ? "Sign In" : "Sign Up"}</h1>
-
                 {!signInForm && <input type="text" ref={name} placeholder='Full Name' className='p-3 my-3 w-full  bg-slate-600 rounded-md' />}
-
                 <input ref={email} type="text" placeholder='Email Address' className='p-3 my-3 w-full  bg-slate-600 rounded-md' />
-
                 <input ref={password} type="password" placeholder='Passward' className='p-3 my-3 w-full  bg-slate-600 rounded-md' />
-
                 <p className='text-red-600 font-bold text-lg p-2'>{errormessage}</p>
-
                 <button className='p-4 my-6 bg-red-600 rounded-md w-full hover:bg-red-500' onClick={handleonclick}>Submit</button>
-
-
-                <h4 onClick={togglebtn} className='cursor-pointer '>{signInForm ? "New to Netflix? Sign Up Now" : "Already Ragistered? Sign In Now"}</h4>
+                <h4 onClick={togglebtn} className='cursor-pointer '>{signInForm ? "New to Netflix? Sign Up Now" : "Already Ragistered! Sign In Now"}</h4>
             </form>
-
-
-            
-            <footer>
-
-            </footer>
         </>
     );
 }
