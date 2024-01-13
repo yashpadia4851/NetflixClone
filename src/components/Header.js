@@ -13,15 +13,18 @@ import { ChangeLanguage } from '../utils/configSlice'
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const ShowGptSearch = useSelector((store) => store.gpt.ShowGptSearch);
+  const ShowGptSearch = useSelector((store) => store?.gpt?.ShowGptSearch);
 
-  const user = useSelector(store => store.user);
+  const user = useSelector(store => store?.user);
 
   const handleSignout = () => {
     signOut(auth).then(() => {
+      console.log(">>>>>> here ")
       // Sign-out successful.
       navigate("/");
     }).catch((error) => {
+      console.log(">>>>>>>>>>>>")
+      console.log(error)
       // An error happened.
       navigate("/erorr");
     });
@@ -46,7 +49,7 @@ const Header = () => {
         navigate("/");
       }
     });
-    return () => unsubscribe()
+    return () => unsubscribe();
   }, []);
 
 
@@ -55,7 +58,7 @@ const Header = () => {
   };
 
   const handleLanguageChange = (e) => {
-    dispatch(ChangeLanguage(e.target.value))
+    dispatch(ChangeLanguage(e?.target?.value))
   }
 
 
@@ -67,7 +70,7 @@ const Header = () => {
         <div className='flex justify-between'>
           {ShowGptSearch &&
             <select className='p-2 bg-gray-700 m-5 text-white rounded-lg' onChange={handleLanguageChange}>
-              {SUPPORTED_LANGUAGES.map((lang) => (<option key={lang.languages} value={lang.languages}>{lang.name}</option>))}
+              {SUPPORTED_LANGUAGES.map((lang) => (<option key={lang?.languages} value={lang?.languages}>{lang?.name}</option>))}
             </select>}
           <button className='m-4 py-3 px-2 bg-red-700 text-white rounded-lg' onClick={GPTSearchClick}>{ShowGptSearch ? "Home Page" : "GPT Search"}</button>
           <img className='hidden md:block w-10 m-8 md:m-0 md:w-20 rounded-full' src={user?.photoURL} alt="User Icon" />
