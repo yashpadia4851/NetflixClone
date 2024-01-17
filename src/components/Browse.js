@@ -22,7 +22,6 @@ const Browser = () => {
     <MainContainer />
     <SecoundaryConatainer />
     </>}
-
     </div>
   );
 }

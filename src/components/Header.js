@@ -19,21 +19,12 @@ const Header = () => {
 
   const handleSignout = () => {
     signOut(auth).then(() => {
-      console.log(">>>>>> here ")
       // Sign-out successful.
       navigate("/");
     }).catch((error) => {
-      console.log(">>>>>>>>>>>>")
-      console.log(error)
       // An error happened.
       navigate("/erorr");
     });
-    // const auth = getAuth();
-    // signOut(auth).then(() => {
-    //   // Sign-out successful.
-    // }).catch((error) => {
-    //   // An error happened.
-    // });
   };
 
   useEffect(() => {
@@ -42,7 +33,7 @@ const Header = () => {
         // User is signed in, see docs for a list of available properties
         const { uid, email, displayName, photoURL } = user;
         dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
-        navigate("/browse");
+        navigate("/browse");  
       } else {
         // User is signed out
         dispatch(removeUser());
@@ -59,9 +50,7 @@ const Header = () => {
 
   const handleLanguageChange = (e) => {
     dispatch(ChangeLanguage(e?.target?.value))
-  }
-
-
+  };
   return (
     <div className='absolute w-screen px-8 py-2 z-10 flex flex-col md:flex-row justify-between bg-gradient-to-b from-black'>
       <img className='w-44 mx-auto md:mx-0' src={LOGO} alt='Logo' />
@@ -80,4 +69,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default Header;  
