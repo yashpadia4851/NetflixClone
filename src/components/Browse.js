@@ -28,7 +28,7 @@ const Browser = () => {
 
 export default Browser;
 
-    {/* 
+    /*{/* 
       MainContainer
        -VideoBackground
        -video Tittle
@@ -37,4 +37,4 @@ export default Browser;
        -movieList * n
        - cards * n
     
-    */}
+    }*/
