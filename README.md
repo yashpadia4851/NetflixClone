@@ -1,20 +1,9 @@
 # NetflixGPt
-- Create Reactapp
-- Install tailwand CSS
-- Header
-- Routing App
-- login form
-- Sign in form
-- Form validation
-- useref hook
-- firebase situp 
-- deploying only front page into firebase
-- create Sign In user
-- Implement Sign In user to API
-- create Redux store with Userslice
 
+# Images
 
-# if you have a big form than always use library like [formilk.com] !important
-# we are using the useRef hook in it
-# firebase Authantication than install to vs ,Go to firebase website and go to project and get email authantiaction , npm install -g firebase-tools on it 
-
+![Screenshot 2024-02-01 125903](https://github.com/yashpadia4851/NetflixClone/assets/147811195/3daab3ab-28a8-4ac6-8ddf-df9e9bbae42d)
+![Screenshot 2024-02-01 130041](https://github.com/yashpadia4851/NetflixClone/assets/147811195/f63c500a-771e-451c-8106-190bf520ef07)
+![Screenshot 2024-02-01 130102](https://github.com/yashpadia4851/NetflixClone/assets/147811195/35baf8d9-6248-43db-ae01-eb1052d4b856)
+![Screenshot 2024-02-01 130121](https://github.com/yashpadia4851/NetflixClone/assets/147811195/3407cead-3b23-4535-b980-eedb0728676c)
+![Screenshot 2024-02-01 130139](https://github.com/yashpadia4851/NetflixClone/assets/147811195/9e3b340e-6b81-4dfe-9e8e-63c50b951b56)
